@@ -1,0 +1,50 @@
+.header {
+  background-color: $gray_light;
+  border-bottom: 3px solid #e7eff3;
+  position: relative;
+  .header-area {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2% 0 1.5%;
+    width: 100%;
+  }
+}
+.social-list {
+  float: right;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin-left: 22px;
+    vertical-align: top;
+    a {
+      background-color: $gray_dark;
+      @include border-radius(50%);
+      color: $gray_light;
+      display: block;
+      height: 45px;
+      text-align: center;
+      width: 45px;
+      .fa {
+        font-size: 30px;
+        line-height: 1.5;
+      }
+    }
+    a:hover {
+      background-color: $green;
+    }
+  }
+}
+.header:before {
+  background: url('../img/border.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  bottom: -3px;
+  content: '';
+  height: 3px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}

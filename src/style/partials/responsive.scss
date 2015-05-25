@@ -1,0 +1,63 @@
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 960px) {
+  .site .site-content, .site .sidebar {
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  .site .site-content, .site .sidebar {
+    text-align: center;
+    max-width: 100%;
+  }
+  .site-main {
+    padding: 0 15px;
+  }
+  .site .site-content .content-area>h2 {
+    border: none;
+    display: block;
+  }
+  .profile-info li>span {
+    display: block;
+    margin: 0;
+  }
+  .social-list {
+    background-color: $green;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+  }
+  .profile-image {
+    float: none;
+    margin: 35px auto 15px;
+  }
+  .profile-info li ul {
+    float: none;
+    margin: 0 auto;
+  }
+  .profile-info li {
+    margin: 0 0 25px;
+  }
+  .profile-desc li:before,
+  .profile-desc li.icon-doc:before,
+  .profile-desc li.icon-learn:before {
+    display: block;
+    float: none;
+    margin: 15px auto;
+  }
+  .main-navigation {
+    display: none;
+  }
+  .footer {
+    margin: 0 0 65px;
+    .login {
+      display: none;
+    }
+  }
+}

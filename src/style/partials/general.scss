@@ -1,0 +1,131 @@
+@mixin transition($sec) {
+  -webkit-transition: all $sec ease-in-out;
+  -moz-transition: all $sec ease-in-out;
+  -o-transition: all $sec ease-in-out;
+  transition: all $sec ease-in-out;
+}
+
+@font-face {
+  font-family: 'fira_sansmedium';
+  src: url('../fonts/fira/firasans-medium.eot');
+  src: url('../fonts/fira/firasans-medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fira/firasans-medium.woff') format('woff'),
+  url('../fonts/fira/firasans-medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fira_sansbook';
+  src: url('../fonts/fira/firasans-book.eot');
+  src: url('../fonts/fira/firasans-book.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fira/firasans-book.woff') format('woff'),
+  url('../fonts/fira/firasans-book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fira_sansbook';
+  src: url('../fonts/fira/firasans-book.eot');
+  src: url('../fonts/fira/firasans-book.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fira/firasans-book.woff') format('woff'),
+  url('../fonts/fira/firasans-book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font1: 'fira_sansmedium';
+$font2: 'fira_sansbook';
+$font3: 'Proxxima-Nova';
+
+$green: #3ba8c0;
+$green_dark: #2e8ca2;
+$green_light1: #41b9d4;
+$green_light2: #48cbe8;
+$green_light3: #51daf8;
+$gray_light: #eff3f7;
+$body_color: #4a545d;
+$gray_dark: #58697a;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+$width: 960px;
+$side_width: 230px;
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url("../img/bg.png");
+  background-repeat: repeat;
+  color: $body_color;
+  font-family: $font2;
+}
+
+a, a:before {
+  @include transition(0.25s);
+  color: $green;
+  text-decoration: none;
+}
+
+a:hover {
+  @include transition(0.25s);
+  color: $gray_light;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.site {
+  margin: 0 auto 13px;
+  max-width: $width;
+  padding: 38px 0 0;
+  width: 100%;
+  .site-content {
+    float: right;
+    max-width: 650px;
+    width: 100%;
+    .content-area {
+      background-color: $gray_light;
+      @include border-radius(4px);
+      clear: both;
+      margin: 0 0 27px;
+      overflow: hidden;
+      padding: 0 0 42px;
+    }
+    .content-area > h2 {
+      border-bottom: 2px solid $green;
+      color: $green;
+      display: table;
+      font-size: 27px;
+      font-weight: normal;
+      margin: 0;
+      padding: 13px 20px 12px;
+    }
+  }
+  .sidebar {
+    float: left;
+    max-width: 250px;
+    width: 100%;
+  }
+}
+
+.site:after {
+  clear: both;
+  content: '';
+  display: table;
+}

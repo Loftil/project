@@ -1,0 +1,96 @@
+
+.profile-image {
+  @include border-radius(50%);
+  border: 5px solid $green;
+  float: left;
+  height: 140px;
+  max-width: 140px;
+  margin: 35px 20px 0 55px;
+  overflow: hidden;
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+.profile-info {
+  float: right;
+  max-width: 420px;
+  padding: 18px 0 0;
+  width: 100%;
+  li{
+    margin: 0 0 7px;
+  }
+  li > span {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 15px 0 0;
+  }
+  li ul {
+    float: right;
+    max-width: 248px;
+    width: 100%;
+  }
+  li li {
+    display: inline-block;
+    margin: 0 5px 3px 0;
+  }
+  li li a {
+    @include border-radius(2px);
+    background-color: $green;
+    color: white;
+    font-size: 11px;
+    overflow: hidden;
+    padding: 0 15px;
+    position: relative;
+  }
+  li li a span {
+    position: relative;
+  }
+  li li a:before {
+    background-color: $green_dark;
+    @include border-radius(0 0 2px 2px );
+    bottom: 0;
+    content: '';
+    height: 50%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+  li li a:hover:before {
+    background-color: $green;
+  }
+  li li a:hover {
+    background-color: $green_dark;
+  }
+}
+.profile-desc {
+  padding: 12px 0 0;
+  position: relative;
+  top: 11px;
+  li:before {
+    clear: both;
+    content: url('../img/icon-bag.png');
+    float: left;
+    margin: 1px 31px 10px 58px;
+  }
+  li.icon-learn:before {
+    content: url('../img/icon-learn.png');
+    margin-right: 25px;
+  }
+  li.icon-doc:before {
+    content: url('../img/icon-doc.png');
+    margin-left: 64px;
+    margin-right: 34px;
+  }
+  li {
+    line-height: 1.2;
+    margin: 0 0 20px;
+  }
+  li:last-child {
+    margin: 0;
+  }
+  li span {
+    display: block;
+    font-size: 1.1em;
+  }
+}

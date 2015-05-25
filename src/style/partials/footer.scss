@@ -1,0 +1,56 @@
+.footer {
+  background-color: $gray_light;
+  border-top: 3px solid #e7eff3;
+  height: 65px;
+  position: relative;
+  .footer-section {
+    max-width: $width;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .copyright {
+    font-size: 0.8em;
+    padding: 15px 0;
+    text-align: center;
+  }
+  .login {
+    background: url('../img/icon-unlock.png') no-repeat center;
+    float: left;
+    margin: 10px -30px 10px 30px;
+    a {
+      background: url('../img/icon-unlock.png') no-repeat center;
+      display: block;
+      position: relative;
+      height: 32px;
+      width: 20px;
+    }
+    a:before {
+      background: url('../img/icon-lock.png') no-repeat center;
+      content: '';
+      height: 32px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 20px;
+    }
+    a:hover:before {
+      opacity: 0;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+.footer:before {
+  background: url('../img/border.png');
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  content: '';
+  height: 3px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: -3px;
+  width: 100%;
+}
