@@ -7,109 +7,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <!--[if lte IE 8]>
+    <style>
+        .footer { margin-top: 0; }
+        .profile-info li ul { max-width: 220px; }
+    </style>
+    <p style="color: red; background-color: #fff; text-align: center;">Dear Web User: Please Upgrade Your Browser</p>
+
+    <![endif]-->
 </head>
 <body>
+<div class="wrapper">
 
-<header class="header">
-    <div class="header-area">
-        <a href="http://loftil.ru">
-            <img src="img/logo.png" alt="site logo"/>
-            <span class="hidden">Сайт портфолио</span>
-        </a>
-        <ul class="social-list">
-            <li><a href="http://github.com" target="_blank"><i class="fa fa-vk"></i><span class="hidden">VK</span></a></li>
-            <li><a href="http://github.com" target="_blank"><i class="fa fa-twitter"></i><span class="hidden">Twitter</span></a></li>
-            <li><a href="http://github.com" target="_blank"><i class="fa fa-facebook"></i><span class="hidden">Facebook</span></a></li>
-            <li><a href="http://github.com" target="_blank"><i class="fa fa-github"></i><span class="hidden">Github</span></a></li>
-        </ul>
-    </div>
-</header>
-
-<div id="page" class="hfeed site">
-
-    <div id="content" class="site-content">
-        <main id="main" class="site-main" role="main">
-
-            <section class="content-area">
-                <h2>Основная информация</h2>
-                <div>
-                    <div class="profile-image"><img src="img/profile.jpg" alt="profile image"/></div>
-                    <ul class="profile-info">
-                        <li><span>Меня зовут:</span>Минка Дмитрий Вячеславович</li>
-                        <li><span>Мой возраст:</span>30 лет</li>
-                        <li><span>Мой город:</span>Кармиель</li>
-                        <li><span>Моя специализация:</span>FRONTEND разработчик</li>
-                        <li>
-                            <span>Ключевые навыки:</span>
-                            <ul>
-                                <li><a href="#"><span>html</span></a></li>
-                                <li><a href="#"><span>CSS</span></a></li>
-                                <li><a href="#"><span>javascript</span></a></li>
-                                <li><a href="#"><span>gulp</span></a></li>
-                                <li><a href="#"><span>git</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="content-area">
-                <h2>Опыт работы</h2>
-                <div>
-                    <ul class="profile-desc">
-                        <li><span>Тех.поддержка и продажи в компъютерном магазине</span>Май 2007 - Июнь 2011</li>
-                        <li><span>Маленькая веб-студия</span>Февраль 2013 - по настоящее время</li>
-                    </ul>
-                </div>
-            </section>
-            <section class="content-area">
-                <h2>Образование</h2>
-                <div>
-                    <ul class="profile-desc">
-                        <li class="icon-learn"><span>Самообучение по видео урокам</span>Август 2012 - Февраль 2013</li>
-                        <li class="icon-doc"><span>Самообучение во время работы веб разработчиком</span>Февраль 2013 - по настоящее время</li>
-                    </ul>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-    <aside id="sidebar" class="sidebar">
-        <div id="secondary" class="secondary">
-            <nav id="site-navigation" class="main-navigation" role="navigation">
-                <div class="side-menu">
-                    <ul class="nav-menu">
-                        <li class="menu-item current"><a href="http://project.loftil.ru">Обо мне</a></li>
-                        <li class="menu-item"><a href="">Мои работы</a></li>
-                        <li class="menu-item"><a href="">Связаться со мной</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <address id="contact-navigation" class="contact-navigation" role="contact">
-                <div class="contact">
-                    <ul class="contact-menu">
-                        <li class="social-item">Контакты</li>
-                        <li class="social-item mail"><a href="mailto:bzx@mail.ru"><i class="fa fa-envelope-o"></i>bzx@mail.ru</a></li>
-                        <li class="social-item phone"><a href="tel:+972545954696"><i class="fa fa-phone"></i>+972545954696</a></li>
-                        <li class="social-item skype"><a href="skype:minton-bzx?chat"><i class="fa fa-skype"></i>minton-bzx</a></li>
-                    </ul>
-                </div>
-            </address>
+    <header class="header">
+        <div class="header-area">
+            <a href="http://loftil.ru">
+                <img src="img/logo.png" alt="site logo"/>
+                <span class="hidden">Сайт портфолио</span>
+            </a>
+            <ul class="social-list">
+                <li><a href="https://vk.com/mintonxbz" target="_blank"><i class="fa fa-vk"></i><span class="hidden">VK</span></a></li>
+                <li><a href="https://twitter.com/dimaminka" target="_blank"><i class="fa fa-twitter"></i><span class="hidden">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/Mintonxbz" target="_blank"><i class="fa fa-facebook"></i><span class="hidden">Facebook</span></a></li>
+                <li><a href="https://github.com/Loftil/project" target="_blank"><i class="fa fa-github"></i><span class="hidden">Github</span></a></li>
+            </ul>
         </div>
-    </aside>
+    </header>
+
+    <div id="page" class="hfeed site">
+
+        <div id="content" class="site-content">
+            <main id="main" class="site-main" role="main">
+
+                <section class="content-area">
+                    <h2>Основная информация</h2>
+                    <div>
+                        <div class="profile-image"><img src="img/profile.jpg" alt="profile image"/></div>
+                        <ul class="profile-info">
+                            <li><span>Меня зовут:</span>Минка Дмитрий Вячеславович</li>
+                            <li><span>Мой возраст:</span>30 лет</li>
+                            <li><span>Мой город:</span>Кармиель</li>
+                            <li><span>Моя специализация:</span>FRONTEND разработчик</li>
+                            <li>
+                                <span>Ключевые навыки:</span>
+                                <ul>
+                                    <li><a href="#"><span>html</span></a></li>
+                                    <li><a href="#"><span>CSS</span></a></li>
+                                    <li><a href="#"><span>javascript</span></a></li>
+                                    <li><a href="#"><span>gulp</span></a></li>
+                                    <li><a href="#"><span>git</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="content-area">
+                    <h2>Опыт работы</h2>
+                    <div>
+                        <ul class="profile-desc">
+                            <li><span>Тех.поддержка и продажи в компъютерном магазине</span>Май 2007 - Июнь 2011</li>
+                            <li><span>Маленькая веб-студия</span>Февраль 2013 - по настоящее время</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="content-area">
+                    <h2>Образование</h2>
+                    <div>
+                        <ul class="profile-desc">
+                            <li class="icon-learn"><span>Самообучение по видео урокам</span>Август 2012 - Февраль 2013</li>
+                            <li class="icon-doc"><span>Самообучение во время работы веб разработчиком</span>Февраль 2013 - по настоящее время</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <aside id="sidebar" class="sidebar">
+            <div id="secondary" class="secondary">
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <div class="side-menu">
+                        <ul class="nav-menu">
+                            <li class="menu-item current"><a href="http://project.loftil.ru">Обо мне</a></li>
+                            <li class="menu-item"><a href="">Мои работы</a></li>
+                            <li class="menu-item"><a href="">Связаться со мной</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <address id="contact-navigation" class="contact-navigation" role="contact">
+                    <div class="contact">
+                        <ul class="contact-menu">
+                            <li class="social-item">Контакты</li>
+                            <li class="social-item mail"><a href="mailto:bzx@mail.ru"><i class="fa fa-envelope-o"></i>bzx@mail.ru</a></li>
+                            <li class="social-item phone"><a href="tel:+972545954696"><i class="fa fa-phone"></i>+972545954696</a></li>
+                            <li class="social-item skype"><a href="skype:minton-bzx?chat"><i class="fa fa-skype"></i>minton-bzx</a></li>
+                        </ul>
+                    </div>
+                </address>
+            </div>
+        </aside>
+
+    </div>
 
 </div>
 
-<footer class="footer">
-    <div class="footer-section">
-        <div class="login">
-            <a href="#"><span>Login</span></a>
+    <footer class="footer">
+        <div class="footer-section">
+            <div class="login">
+                <a href="#"><span>Login</span></a>
+            </div>
+            <p class="copyright">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
         </div>
-        <p class="copyright">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
-    </div>
-</footer>
-
-<script src="js/main.js"></script>
+    </footer>
+    
+    <script src="js/main.js"></script>
 
 </body>
 </html>

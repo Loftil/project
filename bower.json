@@ -7,13 +7,14 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
+    "node_modules",
     "test",
     "tests"
   ],
   "dependencies": {
     "normalize.css": "*",
-    "jquery": "1.*"
+    "jquery": "1.*",
+    "modernizr-min": "~2.8.3"
   }
 }

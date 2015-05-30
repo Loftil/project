@@ -2,9 +2,13 @@
 
 }
 @media screen and (max-width: 960px) {
-  .site .site-content, .site .sidebar {
+  .site .site-content, .site .sidebar,
+  .profile-info {
     float: none;
     margin: 0 auto;
+  }
+  .profile-image {
+    margin-bottom: 60px;
   }
 }
 @media screen and (max-width: 640px) {

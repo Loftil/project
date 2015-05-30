@@ -7,26 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <!--[if lte IE 8]>
+    <style>
+        .footer { margin-top: 0; }
+        .profile-info li ul { max-width: 220px; }
+    </style>
+    <p style="color: red; background-color: #fff; text-align: center;">Dear Web User: Please Upgrade Your Browser</p>
+
+    <![endif]-->
 </head>
 <body>
+<div class="wrapper">
 
-//= template/header.html
+    //= template/header.html
 
-<div id="page" class="hfeed site">
+    <div id="page" class="hfeed site">
 
-    <div id="content" class="site-content">
-        <main id="main" class="site-main" role="main">
+        <div id="content" class="site-content">
+            <main id="main" class="site-main" role="main">
 
-            //= template/page1.html
+                //= template/page1.html
 
-        </main>
+            </main>
+        </div>
+
+        //= template/aside.html
+
     </div>
-
-    //= template/aside.html
 
 </div>
 
-//= template/footer.html
+    //= template/footer.html
 
 </body>
 </html>

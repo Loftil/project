@@ -67,6 +67,7 @@ body {
   background-repeat: repeat;
   color: $body_color;
   font-family: $font2;
+  height: 100%;
 }
 
 a, a:before {
@@ -90,9 +91,15 @@ ul {
   display: none;
 }
 
+.wrapper {
+  min-height: 100%;
+  padding-bottom: 0;
+}
+
 .site {
-  margin: 0 auto 13px;
+  margin: 0 auto;
   max-width: $width;
+  overflow: auto;
   padding: 38px 0 0;
   width: 100%;
   .site-content {
@@ -106,6 +113,9 @@ ul {
       margin: 0 0 27px;
       overflow: hidden;
       padding: 0 0 42px;
+    }
+    .content-area:last-child {
+      margin: 0;
     }
     .content-area > h2 {
       border-bottom: 2px solid $green;
