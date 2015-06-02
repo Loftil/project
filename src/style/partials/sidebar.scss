@@ -5,35 +5,37 @@
     margin: 0 0 24px;
     overflow: hidden;
     .menu-item {
-      a {
+      .menu-link {
         display: block;
         color: $gray_dark;
         font-size: 1.3em;
         padding: 22px 0 18px 27px;
         position: relative;
-      }
-      a:hover {
-        color: $green;
-      }
-      a:before {
-        background: $green;
-        bottom: -2px;
-        content: '';
-        height: 2px;
-        left: 0;
-        margin: 0 auto;
-        max-width:$side_width;
-        position: absolute;
-        right: 0;
-        width: 100%;
+        &:hover {
+          color: $green;
+        }
+        &:before {
+          background: $green;
+          bottom: -2px;
+          content: '';
+          height: 2px;
+          left: 0;
+          margin: 0 auto;
+          max-width: $side_width;
+          position: absolute;
+          right: 0;
+          width: 100%;
+        }
+        &.current, &.current:hover {
+          background-color: $green;
+          color: white;
+        }
+        &.current:before {
+          display: none;
+        }
       }
     }
-    .current a, .current a:hover {
-      background-color: $green;
-      color: white;
-    }
-    .menu-item:last-child a:before,
-    .current a:before {
+    .menu-item:last-child a:before {
       display: none;
     }
   }
@@ -49,38 +51,42 @@
     }
     .social-item {
       background-color: $green_light1;
-      padding: 9px 40px 7px;
-      a {
+      padding: 9px 0 7px 83px;
+      position: relative;
+      &:before {
+        content: '';
+        left: 42px;
+        overflow: hidden;
+        position: absolute;
+        top: 10px;
+      }
+      .side-soc-link {
         color: white;
         position: relative;
+        &:before {
+          content: '';
+          background-color: #fff;
+          bottom: 2px;
+          height: 1px;
+          left: 0;
+          margin: 0 auto;
+          position: absolute;
+          right: 0;
+          width: 0;
+        }
+        &:hover:before {
+          width: 100%;
+        }
       }
-      a:before {
-        content: '';
-        background-color: white;
-        bottom: 2px;
-        height: 1px;
-        left: 0;
-        margin: 0 auto;
-        position: absolute;
-        right: 0;
-        width: 0;
+      &.mail {
+        background-color: $green_light1;
       }
-      a:hover:before {
-        width: 100%;
+      &.phone {
+        background-color: $green_light2;
       }
-      a:hover {
+      &.skype {
+        background-color: $green_light3;
       }
-      .fa {
-        font-size: 1.2em;
-        float: left;
-        margin-right: 20px;
-      }
-    }
-    .phone {
-      background-color: $green_light2;
-    }
-    .skype {
-      background-color: $green_light3;
     }
   }
 }

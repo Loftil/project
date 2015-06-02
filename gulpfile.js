@@ -7,8 +7,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     rigger = require('gulp-rigger'),
     cssmin = require('gulp-minify-css'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
 
@@ -24,14 +22,14 @@ var path = {
         html: 'src/*.html',
         js: 'src/js/main.js',
         style: 'src/style/main.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/img/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/img/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './build'
@@ -69,7 +67,7 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
         .pipe(sass({
-            sourceMap: true,
+            sourceMap: false,
             errLogToConsole: true
         }))
         .pipe(prefixer())
@@ -80,12 +78,6 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });

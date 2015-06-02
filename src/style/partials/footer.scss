@@ -3,7 +3,6 @@
   border-top: 3px solid #e7eff3;
   clear: both;
   height: 65px;
-  margin-top: -60px;
   position: relative;
   .footer-section {
     max-width: $width;
@@ -18,28 +17,25 @@
   .login {
     float: left;
     margin: 10px -30px 10px 30px;
-    a {
+    .login-link {
       background: url('../img/icon-unlock.png');
       display: block;
       position: relative;
       height: 32px;
       width: 20px;
-    }
-    a:before {
-      background: url('../img/icon-lock.png');
-      content: '';
-      height: 32px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 20px;
-    }
-    a:hover:before {
-      filter: alpha(opacity=0);
-      opacity: 0;
-    }
-    span {
-      display: none;
+      &:before {
+        background: url('../img/icon-lock.png');
+        content: '';
+        height: 32px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 20px;
+      }
+      &:hover:before {
+        filter: alpha(opacity=0);
+        opacity: 0;
+      }
     }
   }
 }

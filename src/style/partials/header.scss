@@ -1,6 +1,7 @@
 .header {
   background-color: $gray_light;
   border-bottom: 3px solid #e7eff3;
+  margin-bottom: 38px;
   position: relative;
   .header-area {
     margin: 0 auto;
@@ -13,26 +14,28 @@
   float: right;
   margin: 0;
   padding: 0;
-  li {
+  text-align: justify;
+  width: 260px;
+  .social-item {
     display: inline-block;
-    margin-left: 22px;
     vertical-align: top;
-    a {
-      background-color: $gray_dark;
-      @include border-radius(50%);
-      color: $gray_light;
-      display: block;
-      height: 45px;
-      text-align: center;
-      width: 45px;
-      .fa {
-        font-size: 30px;
-        line-height: 1.5;
-      }
+    &:before {
+      content: '';
     }
-    a:hover {
-      background-color: $green;
+  }
+  .vk, .tw, .facebook, .github {
+    @include border-radius(50%);
+    display: block;
+    overflow: hidden;
+    position: relative;
+    &:before {
+      content: '';
     }
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
   }
 }
 .header:before {
