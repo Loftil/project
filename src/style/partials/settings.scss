@@ -1,0 +1,37 @@
+$blue_light: #edf8fc;
+$body_color: #4a545d;
+$gray_light: #eff3f7;
+$gray_light2: #959aa8;
+$gray_dark: #58697a;
+$gray_dark_75: rgba(88, 105, 122, 0.75);
+$green: #3ba8c0;
+$green_75: rgba(59, 168, 192, 0.75);
+$green_dark: #2e8ca2;
+$green_light1: #41b9d4;
+$green_light2: #48cbe8;
+$green_light3: #51daf8;
+$red: #f97e76;
+$white: #fff;
+
+$width: 960px;
+$side_width: 230px;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($sec) {
+  -webkit-transition: all $sec ease-in-out;
+  -moz-transition: all $sec ease-in-out;
+  -o-transition: all $sec ease-in-out;
+  transition: all $sec ease-in-out;
+}
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}

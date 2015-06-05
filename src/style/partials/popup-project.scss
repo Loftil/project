@@ -1,0 +1,162 @@
+.popup-wrapper {
+  background-color: $gray_dark_75;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  &.active {
+    display: block;
+  }
+}
+
+.popup-window {
+  background-color: $gray_light;
+  @include border-radius(6px);
+  box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35);
+  left: 0;
+  margin: 0 auto;
+  max-width: 362px;
+  position: absolute;
+  right: 0;
+  top: -999px;
+  @include transition(0.5s);
+  width: 100%;
+  &.active {
+    top: 290px;
+  }
+}
+
+.top-title {
+  background-color: $green_light2;
+  border-bottom: 9px solid $green_light3;
+  @include border-radius( 6px 6px 0 0);
+  color: $white;
+  padding: 6px 15px 0;
+  .icon-close {
+    font-weight: normal;
+  }
+}
+
+.popup-title {
+  font-size: 1.55em;
+  font-weight: normal;
+  margin: 0 0 7px;
+  position: relative;
+}
+
+.icon-close {
+  cursor: pointer;
+  font-size: 1.1em;
+  height: 23px;
+  line-height: 0.95;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 10px;
+  width: 23px;
+  &.rounded {
+    @include border-radius(50%);
+    border: 1px solid $white;
+  }
+}
+
+.form-upload {
+  padding: 0 22px;
+}
+
+.popup-error-message {
+  display: none;
+}
+
+.popup-input {
+  margin-bottom: 7px;
+  position: relative;
+  &.message {
+    .error-tooltip {
+      top: 70px;
+    }
+  }
+}
+
+.title-label {
+  color: $gray_light2;
+  font-weight: normal;
+  margin: 0 0 2px;
+}
+
+.input {
+  @include border-radius(4px);
+  border: 1px solid $green_light2;
+  max-width: 300px;
+  padding: 7px 10px;
+  @include placeholder {
+    color: $green_light3;
+  }
+  width: 100%;
+  &.error {
+    border-color: $red;
+  }
+}
+
+.error-tooltip {
+  background-color: $red;
+  color: $white;
+  padding: 0 15px;
+  position: absolute;
+  top: 35px;
+  &:before {
+    content: '➡';
+    color: $red;
+    direction: rtl;
+    font-size: 2em;
+    line-height: 1;
+    overflow: hidden;
+    position: absolute;
+    right: -8px;
+    top: -2px;
+    width: 10px;
+  }
+}
+
+.popup-input.upload:before {
+  background: $green_light2 url('../img/icon-cloud.png') no-repeat 50%;
+  @include border-radius(0 4px 4px 0);
+  bottom: 0;
+  content: '';
+  height: 41px;
+  position: absolute;
+  right: -4px;
+  width: 52px;
+}
+
+.upload-btn {
+  bottom: 0;
+  height: 41px;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 52px;
+}
+
+.popup-input.submit {
+  background-color: $green;
+  @include border-radius(4px);
+  display: table;
+  margin: 0 auto 22px;
+  padding: 0 0 3px;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.input-submit {
+  background-color: $green_light2;
+  border: none;
+  @include border-radius(4px);
+  color: $white;
+  display: block;
+  margin: 0 auto;
+  padding: 4px 35px 1px;
+}

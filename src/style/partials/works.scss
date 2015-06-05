@@ -1,0 +1,111 @@
+.works-wrapper {
+  padding: 0 4px;
+}
+
+.work-page {
+  .content-title {
+    margin-bottom: 27px;
+  }
+}
+
+.project {
+  display: inline-block;
+  margin: 0 13px 40px;
+  max-width: 185px;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.project-image {
+  @include border-radius(4px);
+  border: 2px solid $green;
+  margin-bottom: 6px;
+  position: relative;
+  &:hover .project-over-link {
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+
+.post-image {
+  display: block;
+}
+
+.project-overload {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  &:hover {
+    background-color: $green_75;
+  }
+}
+
+.project-over-link {
+  @include border-radius(4px);
+  border: 2px solid $white;
+  color: $white;
+  padding: 0 5px;
+  visibility: hidden;
+  &:hover {
+    border-color: $gray_dark;
+  }
+  transform: scale(0);
+}
+
+.over-helper {
+  display: inline-block;
+  height: 100%;
+  text-indent: -9999px;
+  vertical-align: middle;
+  width: 0;
+}
+
+.project-link {
+  display: block;
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 0 0 9px;
+  &:hover {
+    color: $gray_dark;
+  }
+}
+
+.project-desc {
+  font-size: 0.9em;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.add-project {
+  background-color: $blue_light;
+  @include border-radius(4px);
+  border: 1px dashed $green;
+}
+
+.project-btn-link {
+  display: block;
+  height: 129px;
+  &:hover {
+    color: $gray_dark;
+    font-weight: bold;
+  }
+}
+
+.title-wrapp {
+  display: inline-block;
+}
+
+.add-icon {
+  display: inline-block;
+  margin: 0 auto 5px;
+}
+
+.add-btn-title {
+  display: table;
+  font-size: 0.8em;
+}
+

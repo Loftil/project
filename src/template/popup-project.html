@@ -1,0 +1,42 @@
+<div class="popup-wrapper">
+    <div class="popup-window">
+        <h3 class="popup-title top-title">Добавление проекта<span class="icon-close rounded">&#215;</span></h3>
+        <div class="popup-form">
+            <div class="popup-error-message">
+                <h3 class="popup-title">Ошибка<span class="icon-close">&#215;</span></h3>
+                <p class="popup-info">Невозможно добавить проект.</p>
+            </div>
+            <form class="form-upload" action="post">
+                <div class="popup-input">
+                    <h4 class="title-label">Название проекта</h4>
+                    <label class="input-label" for="input-name">
+                        <input class="input" type="text" name="name" id="input-name" placeholder="Введите название" data-title="введите название"/>
+                    </label>
+                </div>
+                <div class="popup-input upload">
+                    <h4 class="title-label">Картинка проекта</h4>
+                    <label class="input-label" for="input-image">
+                        <input class="input" type="text" name="image" id="input-image" placeholder="Загрузите изображение" data-title="изображение"/>
+                    </label>
+                    <label for="input-upload"></label>
+                    <input type="file" name="upload" class="upload-btn" id="input-upload" title="">
+                </div>
+                <div class="popup-input">
+                    <h4 class="title-label">URL проекта</h4>
+                    <label class="input-label" for="input-url">
+                        <input class="input" type="text" name="url" id="input-url" placeholder="Добавьте ссылку" data-title="ссылка на проект"/>
+                    </label>
+                </div>
+                <div class="popup-input message">
+                    <h4 class="title-label">Описание</h4>
+                    <label class="input-label" for="input-message">
+                        <textarea class="textarea-input input" name="message" id="input-message" cols="30" rows="4" placeholder="Пара слов о Вашем проекте" data-title="описание проекта"></textarea>
+                    </label>
+                </div>
+                <div class="popup-input submit">
+                    <input class="input-submit" type="submit" name="send" value="Добавить"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

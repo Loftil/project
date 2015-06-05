@@ -15,6 +15,7 @@
   "dependencies": {
     "normalize.css": "*",
     "jquery": "1.*",
-    "modernizr-min": "~2.8.3"
+    "modernizr-min": "~2.8.3",
+    "tooltip-js": "~2.0.1"
   }
 }

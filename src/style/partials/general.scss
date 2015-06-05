@@ -1,10 +1,3 @@
-@mixin transition($sec) {
-  -webkit-transition: all $sec ease-in-out;
-  -moz-transition: all $sec ease-in-out;
-  -o-transition: all $sec ease-in-out;
-  transition: all $sec ease-in-out;
-}
-
 @font-face {
   font-family: 'fira_sansmedium';
   src: url('../fonts/fira/firasans-medium.eot');
@@ -38,25 +31,6 @@
 $font1: 'fira_sansmedium';
 $font2: 'fira_sansbook';
 $font3: 'Proxxima-Nova';
-
-$green: #3ba8c0;
-$green_dark: #2e8ca2;
-$green_light1: #41b9d4;
-$green_light2: #48cbe8;
-$green_light3: #51daf8;
-$gray_light: #eff3f7;
-$body_color: #4a545d;
-$gray_dark: #58697a;
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-$width: 960px;
-$side_width: 230px;
 
 html {
   height: 100%;
@@ -116,30 +90,32 @@ ul {
     .content-area:last-child {
       margin: 0;
     }
-    .content-title {
-      border-bottom: 2px solid $green;
-      color: $green;
-      display: table;
-      font-size: 27px;
-      font-weight: normal;
-      margin: 0 0 11px;
-      padding: 13px 20px 12px;
-    }
-    .general-info {
-      margin: 0 0 17px;
-    }
   }
-  .sidebar {
-    float: left;
-    max-width: 250px;
-    width: 100%;
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
   }
 }
 
-.site:after {
-  clear: both;
-  content: '';
+.content-title {
+  border-bottom: 2px solid $green;
+  color: $green;
   display: table;
+  font-size: 27px;
+  font-weight: normal;
+  margin: 0 0 11px;
+  padding: 13px 20px 12px;
+}
+
+.general-info {
+  margin: 0 0 17px;
+}
+
+.sidebar {
+  float: left;
+  max-width: 250px;
+  width: 100%;
 }
 
 .vk, .facebook, .github, .tw  {
