@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    "use strict";
     $(".menu-link[href*='" + location.pathname + "']").addClass("current");
 
     $('.open-btn').on('click', function () {

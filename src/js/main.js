@@ -8,3 +8,4 @@
  * Custom
  */
 //= partials/app.js
+//= partials/contact.js

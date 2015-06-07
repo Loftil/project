@@ -41,6 +41,7 @@ var config = {
     },
     tunnel: true,
     host: 'localhost',
+    open: false,
     port: 9000,
     logPrefix: "Frontend_BZX"
 };
