@@ -12,7 +12,11 @@ $( document ).ready(function() {
         $('.popup-wrapper').fadeOut();
     });
 
-    $('.input-submit').on('click', function (e) {
+    $('.popup-wrapper .input-submit').on('click', function (e) {
+        e.preventDefault();
+    });
+
+    $('.popup-wrapper .input-submit').one('click', function (e) {
         e.preventDefault();
         $('.input').addClass('error');
         $('.input').each(function() {

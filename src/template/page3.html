@@ -1,24 +1,44 @@
-<section class="content-area work-page">
-    <h1 class="content-title general-info">Мои работы</h1>
+<section class="content-area contact-page">
+    <h1 class="content-title contact-info">У вас интересный проект? Напишите мне</h1>
     <div class="container works-wrapper">
         <div class="stretch contacts_block_bg">
             <div class="contact_form">
                 <div id="note"></div>
                 <div id="fields">
                     <form id="ajax-contact-form" action="#">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <input type="text" name="name" value="" placeholder="Name *" />
+                        <div class="form-wrapper">
+                            <div class="input-area__col2">
+                                <label class="input-label" for="name">Имя</label>
+                                <input id="name" class="input input-name" type="text" name="name" value="" placeholder="Как к Вам обращаться" data-title="Вы не ввели имя" />
                             </div>
-                            <div class="col-md-4">
-                                <input type="text" name="email" value="" placeholder="Email *" />
+                            <div class="input-area__col2 right">
+                                <label class="input-label" for="email">Email</label>
+                                <input id="email" class="input input-email" type="text" name="email" value="" placeholder="Куда мне писать" data-title="Вы не вели email" />
                             </div>
-                            <div class="col-md-4">
-                                <input type="text" name="subject" value="" placeholder="Subject" />
+                            <div class="input-area clear">
+                                <label class="input-label" for="message">Сообщение</label>
+                                <textarea class="input input-message" name="message" id="message" placeholder="Кратко в чем суть" data-title="Ваш вопрос"></textarea>
+                            </div>
+                            <div class="input-area clear">
+                                <label class="input-label captcha" for="captcha">Введите код, указаный на картинке</label>
+                                <div class="input-area__col2">
+                                    <div class="captcha-wrapper">
+                                        <img class="img-captcha" src="img/captcha.png" alt="captcha"/>
+                                    </div>
+                                </div>
+                                <div class="input-area__col2 right captcha-helper">
+                                    <input id="captcha" class="input input-captcha" type="text" name="captcha" value="" placeholder="Введите код" data-title="Вы не ввели код" />
+                                </div>
+                            </div>
+                            <div class="input-area form-btn">
+                                <div class="popup-input submit">
+                                    <input type="submit" class="send_btn input-submit" value="Отправить">
+                                </div>
+                                <div class="popup-input submit reset">
+                                    <input type="reset" class="input-submit" value="Очистить">
+                                </div>
                             </div>
                         </div>
-                        <textarea name="message" id="message" placeholder="Message *"></textarea>
-                        <input type="submit" class="send_btn" value="Send message">
                     </form>
                 </div>
             </div>

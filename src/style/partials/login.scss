@@ -1,0 +1,109 @@
+.admin-page {
+  .popup-window {
+    background-color: $gray_light;
+    @include border-radius(6px);
+    box-shadow: 0px 6px 12.48px 0.52px rgba(13, 16, 7, 0.35);
+    left: 0;
+    margin: 0 auto;
+    max-width: 590px;
+    position: relative;
+    right: 0;
+    top: 115px;
+    @include transition(0.5s);
+    width: 100%;
+  }
+
+  .top-title {
+    background-color: $green_light2;
+    border-bottom: 15px solid $green_light3;
+    @include border-radius( 6px 6px 0 0);
+    color: $white;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 7px;
+    padding: 15px 15px;
+    text-align: center;
+  }
+
+  .form-upload {
+    padding: 6px 22px 1px;
+    text-align: center;
+  }
+
+  .popup-error-message {
+    display: none;
+  }
+
+  .popup-input {
+    margin: 0 auto 11px;
+    max-width: 422px;
+    position: relative;
+    &.last {
+      margin-bottom: 34px;
+    }
+  }
+
+  .title-label {
+    color: $gray_light2;
+    font-size: 2.25em;
+    font-weight: normal;
+    margin: 0 0 2px;
+  }
+
+  .input {
+    @include border-radius(4px);
+    border: 1px solid $green_light2;
+    max-width: 388px;
+    padding: 18px;
+    @include placeholder {
+      color: $green_light3;
+    }
+    width: 100%;
+    &.error {
+      border-color: $red;
+    }
+  }
+
+  .error-tooltip {
+    background-color: $red;
+    color: $white;
+    padding: 0 15px;
+    position: absolute;
+    top: 75px;
+    &:before {
+      content: '➡';
+      color: $red;
+      direction: rtl;
+      font-size: 2em;
+      line-height: 1;
+      overflow: hidden;
+      position: absolute;
+      right: -8px;
+      top: -2px;
+      width: 10px;
+    }
+  }
+
+  .popup-input.submit {
+    background-color: $green;
+    @include border-radius(8px);
+    display: table;
+    font-size: 2.25em;
+    margin: 0 auto 22px;
+    padding: 0 0 3px;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .input-submit {
+    background-color: $green_light2;
+    border: none;
+    @include border-radius(8px);
+    color: $white;
+    display: block;
+    line-height: 1;
+    margin: 0 auto;
+    padding: 10px 60px 6px;
+  }
+}

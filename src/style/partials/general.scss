@@ -65,6 +65,17 @@ ul {
   display: none;
 }
 
+.clear {
+  clear: both;
+}
+
+.clear:before,
+.clear:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
 .wrapper {
   min-height: 100%;
   margin-bottom: 32px;
@@ -73,7 +84,6 @@ ul {
 .site {
   margin: 0 auto;
   max-width: $width;
-  overflow: auto;
   width: 100%;
   .site-content {
     float: right;
@@ -84,7 +94,6 @@ ul {
       @include border-radius(4px);
       clear: both;
       margin: 0 0 27px;
-      overflow: hidden;
       padding: 0 0 42px;
     }
     .content-area:last-child {
@@ -100,6 +109,7 @@ ul {
 
 .content-title {
   border-bottom: 2px solid $green;
+  @include border-radius( 4px 4px 0 0);
   color: $green;
   display: table;
   font-size: 27px;

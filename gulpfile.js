@@ -8,11 +8,14 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     cssmin = require('gulp-minify-css'),
     browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    livereload = require('gulp-livereload'),
+    notify = require("gulp-notify");
+    //reload = browserSync.reload;
 
 var path = {
     build: {
         html: 'build/',
+        php: 'build/php/',
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
@@ -20,6 +23,7 @@ var path = {
     },
     src: {
         html: 'src/*.html',
+        php: 'src/php/*.*',
         js: 'src/js/main.js',
         style: 'src/style/*.scss',
         img: 'src/img/*.*',
@@ -27,6 +31,7 @@ var path = {
     },
     watch: {
         html: 'src/**/*.html',
+        php: 'src/php/*.*',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
         img: 'src/img/*.*',
@@ -35,26 +40,17 @@ var path = {
     clean: './build'
 };
 
-var config = {
-    server: {
-        baseDir: "./build"
-    },
-    tunnel: true,
-    host: 'localhost',
-    open: false,
-    port: 9000,
-    logPrefix: "Frontend_BZX"
-};
-
-gulp.task('webserver', function () {
-    browserSync(config);
-});
-
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
-        .pipe(reload({stream: true}));
+        .pipe(livereload())
+});
+
+gulp.task('php:build', function () {
+    gulp.src(path.src.php)
+        .pipe(gulp.dest(path.build.php))
+        .pipe(livereload())
 });
 
 gulp.task('js:build', function () {
@@ -62,7 +58,7 @@ gulp.task('js:build', function () {
         .pipe(rigger())
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
-        .pipe(reload({stream: true}));
+        .pipe(livereload())
 });
 
 gulp.task('style:build', function () {
@@ -74,13 +70,13 @@ gulp.task('style:build', function () {
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))
-        .pipe(reload({stream: true}));
+        .pipe(livereload())
 });
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
         .pipe(gulp.dest(path.build.img))
-        .pipe(reload({stream: true}));
+        .pipe(livereload())
 });
 
 gulp.task('fonts:build', function() {
@@ -90,6 +86,7 @@ gulp.task('fonts:build', function() {
 
 gulp.task('build', [
     'html:build',
+    'php:build',
     'js:build',
     'style:build',
     'fonts:build',
@@ -98,17 +95,46 @@ gulp.task('build', [
 
 
 gulp.task('watch', function(){
+    livereload.listen();
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
+        gulp.src('')
+            .pipe(notify({
+                title: "HTML changed",
+                message: 'Browser reloaded'
+            }));
+    });
+    watch([path.watch.php], function(event, cb) {
+        gulp.start('php:build');
+        gulp.src('')
+            .pipe(notify({
+                title: "PHP changed",
+                message: 'Browser reloaded'
+            }));
     });
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
+        gulp.src('')
+            .pipe(notify({
+                title: "CSS changed",
+                message: 'Browser reloaded'
+            }));
     });
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
+        gulp.src('')
+            .pipe(notify({
+                title: "JS changed",
+                message: 'Browser reloaded'
+            }));
     });
     watch([path.watch.img], function(event, cb) {
         gulp.start('image:build');
+        gulp.src('')
+            .pipe(notify({
+                title: "Image changed",
+                message: 'Browser reloaded'
+            }));
     });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
@@ -116,4 +142,4 @@ gulp.task('watch', function(){
 });
 
 
-gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('default', ['build', 'watch']);
