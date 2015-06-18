@@ -29,4 +29,8 @@ $( document ).ready(function() {
         });
     });
 
+    $('.mob-menu').on('click', function () {
+        $( '.main-navigation' ).toggleClass( 'active' );
+    });
+
 });

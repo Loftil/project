@@ -1,6 +1,9 @@
 @media screen and (max-width: 1200px) {
 
 }
+@media screen and (max-width: 1030px) {
+
+}
 @media screen and (max-width: 960px) {
   .site .site-content, .site .sidebar,
   .profile-info {
@@ -12,6 +15,9 @@
   }
 }
 @media screen and (max-width: 640px) {
+  .desktop-hide {
+    display: block;
+  }
   .site .site-content, .site .sidebar {
     text-align: center;
     max-width: 100%;
@@ -31,7 +37,8 @@
     background-color: $green;
     bottom: 0;
     left: 0;
-    padding: 10px 0;
+    line-height: 1;
+    padding: 0;
     position: fixed;
     text-align: center;
     width: 100%;
@@ -55,13 +62,82 @@
     float: none;
     margin: 15px auto;
   }
-  .main-navigation {
-    display: none;
+  .secondary .main-navigation {
+    background-color: $green;
+    position: absolute;
+    top: -999px;
+    width: 100%;
+    &.active {
+      top: 55px;
+    }
+  }
+  .secondary .main-navigation .menu-item .menu-link {
+    color: $white;
+    padding: 5% 0;
+  }
+  .secondary .main-navigation .menu-item .menu-link:before {
+    background-color: $white;
   }
   .footer {
-    margin: 0 0 65px;
+    margin: 0 0 75px;
     .login {
       display: none;
     }
+  }
+  .social-list .social-item {
+    margin: 2%;
+    position: relative;
+    top: 8px;
+  }
+  .popup-window.active {
+    top: 0;
+  }
+  .popup-wrapper {
+    position: fixed;
+  }
+}
+@media screen and (max-width: 480px) {
+  .input-message, .input-area__col2 .input {
+    max-width: 260px;
+    width: 100%;
+  }
+  .input-area__col2.right, .input-area__col2 {
+    float: none;
+  }
+  .captcha-wrapper {
+    margin: 0 auto;
+  }
+  .form-btn {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+  .admin-page .popup-window {
+    top: 2%;
+  }
+  .admin-page .site-main {
+    padding: 0;
+  }
+  .admin-page .popup-wrapper {
+    position: relative;
+  }
+  .admin-page .popup-window {
+    max-width: 350px;
+  }
+  .admin-page .popup-input {
+    max-width: 250px;
+  }
+  .admin-page .input {
+    max-width: 210px;
+  }
+  .admin-page .error-tooltip {
+    display: none;
+  }
+  .form-upload {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .admin-page .top-title {
+    font-size: 2em;
   }
 }

@@ -78,11 +78,15 @@ ul {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: 32px;
+  &:after {
+    content: '';
+    display: table;
+    height: 68px;
+  }
 }
 
 .site {
-  margin: 0 auto;
+  margin: 0 auto 32px;
   max-width: $width;
   width: 100%;
   .site-content {
@@ -210,4 +214,8 @@ ul {
   background-position: -313px -14px ;
   width: 20px;
   height: 20px;
+}
+
+.desktop-hide {
+  display: none;
 }

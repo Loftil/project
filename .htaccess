@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} -d
+RewriteRule ^.*$ http://project.loftil.ru$1/index.html [R=301,L]

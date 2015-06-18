@@ -5,13 +5,14 @@
     <title>Test Project</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/style-works.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
     <script type="text/javascript" src="js/modernizr.min.js"></script>
     <!--[if lte IE 8]>
     <style>
         .footer { margin-top: 0; }
         .profile-info li ul { max-width: 220px; }
+        .popup-window.active { top: 2%; }
     </style>
     <p style="color: red; background-color: #fff; text-align: center;">Dear Web User: Please Upgrade Your Browser</p>
 
@@ -22,10 +23,11 @@
 
     <header class="header">
         <div class="header-area">
-            <a href="http://loftil.ru">
+            <a href="http://project.loftil.ru">
                 <img src="img/logo.png" alt="site logo"/>
                 <span class="hidden">Сайт портфолио</span>
             </a>
+            <span class="mob-menu desktop-hide"><span class="menu-mob-title">Menu</span></span>
             <ul class="social-list">
                 <li class="social-item"><a class="vk" href="https://vk.com/mintonxbz" target="_blank"><span class="hidden">VK</span></a></li>
                 <li class="social-item"><a class="tw" href="https://twitter.com/dimaminka" target="_blank"><span class="hidden">Twitter</span></a></li>
@@ -171,6 +173,7 @@
                         <h4 class="title-label">Картинка проекта</h4>
                         <label class="input-label" for="input-image">
                             <input class="input" type="text" name="image" id="input-image" placeholder="Загрузите изображение" data-title="изображение"/>
+                            <span class="upload-img"></span>
                         </label>
                         <label for="input-upload"></label>
                         <input type="file" name="upload" class="upload-btn" id="input-upload" title="">

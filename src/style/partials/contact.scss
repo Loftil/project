@@ -1,4 +1,4 @@
-.contact-info {
+.contact-info.content-title {
   background-color: $green;
   border-bottom: 17px solid $green_light3;
   color: $white;
@@ -41,6 +41,7 @@
 .input {
   @include border-radius(4px);
   border: 1px solid $green_light2;
+  color: $green_light3;
   font-size: 0.8em;
   padding: 10px 7px;
   width: 100%;
